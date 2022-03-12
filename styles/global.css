@@ -1,0 +1,93 @@
+@import "header.css";
+@import "game-list.css";
+
+:root {
+
+    --very-dark-purple: #0b0418;
+    --primary: #9146ff;
+    --primary-hover: #b27eff;
+    --card: #1E182A;
+    --card-highlight: #081a37;
+    --general-texts: #c2bcd3;
+    --redeemed: #6abf20;
+    --white: #ffffff;
+    --offer: #dad8de;
+    --dark-purple: #190d2c;
+}
+
+* {
+
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+    ::-webkit-scrollbar {
+        width: 5px;
+  }
+    ::-webkit-scrollbar-thumb {
+        background: var(--dark-purple);
+        border-radius: 10px;
+  }
+    ::-webkit-scrollbar-track{
+        background: var(--very-dark-purple);
+        border-radius: 10px;
+  }
+
+  
+body {
+
+    background: var(--very-dark-purple);
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+
+}
+
+a {
+
+    text-decoration: none;
+
+}
+
+button {
+
+    cursor: pointer;
+    
+}
+
+.container {
+
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 30px;
+
+}
+
+@media(max-width: 450px) {
+    .container {
+        padding: 0;
+
+    }
+}
+
+
+.footer {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    background-color: var(--dark-purple);
+}
+
+.footer a {
+    color: var(--primary-hover);
+    transition: 0.4s;
+}
+
+.footer a:hover {
+    color: var(--white);
+}

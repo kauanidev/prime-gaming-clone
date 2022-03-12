@@ -1,0 +1,167 @@
+main.container {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 50px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards h2 {
+    font-size: 22px;
+}
+
+.cards h2 span {
+    font-weight: 400;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 360px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.image {
+    height: 195px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.card:hover .image img {
+    transform: scale(1.05);
+}
+
+.content {
+    flex: 1;
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card.highlight .content {
+    background: var(--card-highlight);
+}
+
+.content > div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.content div h5 {
+    font-size: 14px;
+}
+
+.content > div p {
+    font-size: 12px;
+    color: var(--general-texts);
+    font-weight: 500;
+}
+
+.content footer {
+    border-top: 1px solid var(--general-texts);
+    height: 50px;
+}
+
+.content footer > div {
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.content footer > div p {
+    color: var(--offer);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.content footer > div p span {
+    color: var(--white);
+}
+
+.content footer a {
+    background: var(--primary);
+    padding: 5px 7px;
+    font-size: 14px;
+    color: var(--white);
+    font-weight: 500;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+
+.content footer a:hover {
+    background: var(--primary-hover);
+}
+
+.content footer div strong {
+    font-size: 14px;
+    color: var(--redeemed);
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.content footer div div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+
+@media(max-width: 1200px) {
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+}
+
+@media(max-width: 720px) {
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+
+@media(max-width: 450px) {
+    .cards h2 {
+        font-size: 20px;
+        text-align: center;
+        padding: 0px 20px;
+    }
+
+    .card {
+        border-radius: 0;
+    }
+}
